@@ -1,0 +1,329 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 8447538464b07b320c9f18a9c80ef6b696635a63)
++++ b/.idea/gradle.xml	(date 1665607970256)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(revision 8447538464b07b320c9f18a9c80ef6b696635a63)
++++ b/app/src/main/res/values/colors.xml	(date 1665991415335)
+@@ -7,4 +7,6 @@
+     <color name="teal_700">#FF018786</color>
+     <color name="black">#FF000000</color>
+     <color name="white">#FFFFFFFF</color>
++    <color name="gray">#20000000</color>
++    <color name="red">#ff0000</color>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 8447538464b07b320c9f18a9c80ef6b696635a63)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1665991961032)
+@@ -1,18 +1,218 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    tools:context=".MainActivity">
++    android:background="#50000000"
++    android:orientation="vertical">
++
++    <EditText
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:gravity="right"
++        android:text="@string/key_0"
++        android:textSize="60sp" />
++
++    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
++
++        xmlns:tools="http://schemas.android.com/tools"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:columnCount="4"
++        android:useDefaultMargins="true"
++        tools:context=".MainActivity">
+ 
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        <Button
++            android:id="@+id/key_AC"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_AC"
++            android:textColor="@color/red"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_del"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_del"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_percent"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_percent"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_division"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_division"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_7"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_7"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_8"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_8"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_9"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_9"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_multiplication"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_multiplication"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_4"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_4"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_5"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_5"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_6"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_6"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_subtraction"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_subtraction"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++        <Button
++            android:id="@+id/key_1"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_1"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_2"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_2"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_3"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_3"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_addition"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_addition"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_0"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnSpan="2"
++            android:layout_columnWeight="1"
++            android:layout_gravity="fill_horizontal"
++            android:background="@color/gray"
++            android:text="@string/key_0"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_point"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_point"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++        <Button
++            android:id="@+id/key_equally"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_columnWeight="1"
++            android:background="@color/gray"
++            android:text="@string/key_equally"
++            android:textColor="@color/black"
++            android:textSize="24sp" />
++
++
++    </GridLayout>
++</LinearLayout>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 8447538464b07b320c9f18a9c80ef6b696635a63)
++++ b/.idea/misc.xml	(date 1665990239135)
+@@ -1,5 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="DesignSurface">
++    <option name="filePathToZoomLevelMap">
++      <map>
++        <entry key="..\:/Users/Ttt/AndroidStudioProjects/HomeworkLesson2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
++        <entry key="..\:/Users/Ttt/AndroidStudioProjects/HomeworkLesson2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1615" />
++        <entry key="..\:/Users/Ttt/AndroidStudioProjects/HomeworkLesson2/app/src/main/res/layout/activity_main.xml" value="0.2" />
++        <entry key="..\:/Users/Ttt/AndroidStudioProjects/HomeworkLesson2/app/src/main/res/layout/newlauout.xml" value="0.67" />
++      </map>
++    </option>
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 8447538464b07b320c9f18a9c80ef6b696635a63)
++++ b/app/src/main/res/values/strings.xml	(date 1665988407648)
+@@ -1,3 +1,22 @@
+ <resources>
+     <string name="app_name">Homework Lesson2</string>
++    <string name="key_1">1</string>
++    <string name="key_2">2</string>
++    <string name="key_3">3</string>
++    <string name="key_division">/</string>
++    <string name="key_4">4</string>
++    <string name="key_5">5</string>
++    <string name="key_6">6</string>
++    <string name="key_multiplication">*</string>
++    <string name="key_7">7</string>
++    <string name="key_8">8</string>
++    <string name="key_9">9</string>
++    <string name="key_subtraction">-</string>
++    <string name="key_0">0</string>
++    <string name="key_equally">=</string>
++    <string name="key_point">.</string>
++    <string name="key_addition">+</string>
++    <string name="key_AC">AC</string>
++    <string name="key_del">del</string>
++    <string name="key_percent">%</string>
+ </resources>
+\ No newline at end of file
