@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#60000000"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_width="match_parent">
 
-    <EditText
+    <TextView
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
         android:text="@string/key_0"
         android:textSize="60sp"
-        android:inputType="number"
-        android:autofillHints="no"
-        tools:ignore="LabelFor" />
+        android:autofillHints="no" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="4"
         android:useDefaultMargins="true"
-        tools:context=".MainActivity">
+        tools:context="UI.CalculatorActivity">
 
         <Button
             android:id="@+id/key_AC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_AC"
             android:textColor="@color/red"
             android:textSize="24sp" />
@@ -38,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_del"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -48,7 +45,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_percent"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -58,7 +54,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_division"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -68,7 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_7"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -78,7 +72,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_8"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -88,7 +81,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_9"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -98,7 +90,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_multiplication"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -108,7 +99,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_4"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -118,7 +108,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_5"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -128,7 +117,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_6"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -138,7 +126,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_subtraction"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -148,7 +135,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_1"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -158,7 +144,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_2"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -168,7 +153,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_3"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -178,7 +162,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_addition"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -190,17 +173,15 @@
             android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
-            android:background="@color/gray"
             android:text="@string/key_0"
             android:textColor="@color/black"
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/key_point"
+            android:id="@+id/key_dot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_point"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -210,7 +191,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:background="@color/gray"
             android:text="@string/key_equally"
             android:textColor="@color/black"
             android:textSize="24sp" />
