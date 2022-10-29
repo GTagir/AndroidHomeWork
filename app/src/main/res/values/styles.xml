@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyCoolStyle">
+        <item name="android:textSize">@dimen/text_size24</item>
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:layout_marginStart">@dimen/margin16</item>
+        <item name="android:layout_marginEnd">@dimen/margin16</item>
+        <item name="android:layout_marginTop">@dimen/margin16</item>
+
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>
