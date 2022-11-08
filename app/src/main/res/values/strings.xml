@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">HomeWorkLesson1</string>
+    <string name="app_name">HomeWork Lesson One</string>
+    <string name="rezault">Вывод результата!</string>
+    <string name="button">Button</string>
+    <string name="text">Text!!!!</string>
+    <string name="On">Включить</string>
+    <string name="num1">1-ый вариант</string>
+    <string name="on">Включено</string>
+    <string name="off">Выключено</string>
+    <string name="text1">text</string>
+    <string name="textpersonname">textPersonName</string>
+    <string name="phone">phone</string>
+    <string name="number">number</string>
+    <string name="textpassword">textPassword</string>
+    <string name="textemailaddress">textEmailAddress</string>
+    <string name="date">date</string>
 </resources>
